@@ -146,7 +146,11 @@ X11Forwarding <%= @x11forwarding %>
 X11Forwarding yes
 <% end -%>
 #X11DisplayOffset 10
+<% if @x11uselocalhost -%>
+X11UseLocalhost <%= @x11uselocalhost %>
+<% else -%>
 #X11UseLocalhost yes
+<% end -%>
 #PermitTTY yes
 
 # It is recommended to use pam_motd in /etc/pam.d/sshd instead of PrintMotd,
